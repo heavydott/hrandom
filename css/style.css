@@ -22,7 +22,7 @@
 	border: none;
 	font-size: 50px;
 	color: #F8FC94;
-	width: 60%;
+	width: 100%;
 	text-align: center;
 	margin: 5% auto;
 }
@@ -38,7 +38,7 @@
 
 #result {
 	background-color: #423164;
-	width: 100px;
+	min-width: 100px;
 	height: 100px;
 	border-radius: 50px;
 }
@@ -46,7 +46,14 @@
 #result p {
 	font-size: 50px;
 	color: #F8FC94;
-	padding-top: 19px;
+	padding: 19px 10px 0 10px;
+}
+
+#result span {
+	font-size: 27px;
+	color: #FF8D8D;
+	padding: 0 10px;
+	line-height: 90px;
 }
 
 #btn {
