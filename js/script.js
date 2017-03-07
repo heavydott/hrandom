@@ -28,6 +28,7 @@ $name.on('click', function() {
 // Random button event
 $btn.on('click', function(e) {
 	e.preventDefault();
+	e.stopPropagation();
 
 	var data = $in.val();
 
@@ -54,6 +55,7 @@ $btn.on('click', function(e) {
 // Heads or tails handler
 function headsOrTails(e) {
 	e.preventDefault();
+	e.stopPropagation();
 
 	var flip, flipBack;
 	var randCoin = Math.floor((Math.random() * 10) + 1);
