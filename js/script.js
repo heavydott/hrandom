@@ -69,8 +69,8 @@ function headsOrTails() {
 	setTimeout(function() {
 		flipBack = setInterval(function() {
 			$coin.removeClass('flip');
-		}, 150);
-	}, 100);
+		}, 200);
+	}, 150);
 
 	$container.addClass('bigger');
 
