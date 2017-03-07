@@ -59,7 +59,7 @@ $btn.on('click', function(e) {
 
 function headsOrTails() {
 	var flip, flipBack;
-	var randCoin = Math.floor((Math.random() * 10) + 1);
+	var randCoin = Math.floor((Math.random() * 1000) + 1);
 
 	$('.tails').off('click');
 	$('.heads').off('click');
@@ -85,7 +85,7 @@ function headsOrTails() {
 		clearInterval(flipBack);
 
 
-		if(randCoin > 5) {
+		if(randCoin > 500) {
 			$coin.addClass('flip');
 		} else {
 			$coin.removeClass('flip');
