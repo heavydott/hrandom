@@ -13,7 +13,10 @@ function isNumeric(n) {
 }
 
 // Coin / Number
-$name.on('click', function() {
+$name.on('click', function(e) {
+	e.preventDefault();
+	e.stopPropagation();
+
 	if($containerNumber.css('display') == 'block') {
 		$containerNumber.css('display', 'none');
 		$containerCoin.css('display', 'block');
@@ -96,4 +99,14 @@ $coin.on('click', function(e) {
 	setTimeout(function() {
 		$coin.on('click', headsOrTails);
 	}, 2500);
+});
+
+$('.tails').on('click', function(e) {
+	e.preventDefault();
+	e.stopPropagation();
+});
+
+$('.heads').on('click', function(e) {
+	e.preventDefault();
+	e.stopPropagation();
 });
