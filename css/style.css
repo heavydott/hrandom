@@ -4,17 +4,40 @@
 	font-family: 'Arvo', serif;
 }
 
-#container {
+input[type=text]:focus,
+button:focus {
+	outline: 0;
+}
+
+#name {
+	font-size: 20px;
+	color: #fff;
+	position: absolute;
+	top: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 100;
+	padding: 5px;
+	border: none;
+	border-radius: 17px;
+	background-color: #FF8D8D;
+}
+
+#name:active {
+	color: #FF8D8D;
+	background-color: #fff;
+}
+
+/* Number */
+
+#container-number {
 	width: 100%;
 	height: 100%;
 	background-color: #281C41;
 	position: fixed;
 	text-align: center;
-}
-
-#name {
-	font-size: 20px;
-	color: #F8FC94;
+	padding-top: 45px;
+	display: block;
 }
 
 #in {
@@ -66,15 +89,93 @@
 	font-size: 50px;
 }
 
-#btn:focus {
-	outline: 0;
-}
-
 #btn:active {
 	background-color: #504072;
 	color: #F8FC94;
 }
-	
+
+/* COIN */
+
+#container-coin {
+	width: 100%;
+	height: 100%;
+	background-color: #F8FC94;
+	position: fixed;
+	text-align: center;
+	padding-top: 45px;
+	display: none;
+}
+
+#container {
+	width: 100px;
+	height: 100px;
+	position: relative;
+	margin: 65px auto 0;
+	transition: .5s linear;
+}
+
+#container.bigger {
+	width: 200px;
+	height: 200px;
+	margin-top: 15px;
+}
+
+#coin {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	-webkit-transition: -webkit-transform 0.1s;
+	-moz-transition: -moz-transform 0.1s;
+	-ms-transition: -moz-transform 0.1s
+	-o-transition: -o-transform 0.1s;
+	transition: transform 0.1s;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+#coin.flip {
+	-webkit-transform: rotateY( 180deg );
+	-moz-transform: rotateY( 180deg );
+	-ms-transform: rotateY( 180deg );
+	-o-transform: rotateY( 180deg );
+	transform: rotateY( 180deg );
+}
+
+figure {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	display: block;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	-o-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.tails {
+	background: url(../imgs/tails.png) no-repeat;
+	background-size: 100%;
+}
+
+.heads {
+	background: url(../imgs/heads.png) no-repeat;
+	background-size: 100%;
+	-webkit-transform: rotateY( 180deg );
+	-moz-transform: rotateY( 180deg );
+	-ms-transform: rotateY(180deg);
+	-o-transform: rotateY( 180deg );
+	transform: rotateY( 180deg );
+}
+
+#tap {
+	color: #281C41;
+	font-size: 40px;
+}
+
 @media only screen and (orientation: portrait) {
 	#result {
 		margin: 5% auto;
@@ -96,13 +197,13 @@
 
 	#result {
 		position: fixed;
-		left: 15%;
+		left: 10%;
 		bottom: 15%;
 	}
 
 	#btn {
 		position: fixed;
-		right: 15%;
+		right: 10%;
 		bottom: 15%;
 	}
 }

@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<title>H-Random</title>
 		<link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
@@ -11,11 +11,20 @@
 		<script src="js/jquery-3.1.1.min.js"></script>
 	</head>
 	<body>
-		<div id="container">
-			<p id="name">H-RANDOM</p>
+		<button id="name">COIN</button>
+		<div id="container-number">
 			<input type="text" name="in" id="in" placeholder="here">
 			<div id="result"></div>
 			<button id="btn">H</button>
+		</div>
+		<div id="container-coin">
+			<div id="container">
+				<div id="coin">
+					<figure class="tails"></figure>
+					<figure class="heads"></figure>
+				</div>
+			</div>
+			<p id="tap">TAP TO COIN</p>
 		</div>
 		<script src="js/script.js"></script>
 	</body>
