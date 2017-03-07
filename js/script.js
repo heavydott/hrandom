@@ -52,8 +52,8 @@ $btn.on('click', function(e) {
 	}
 });
 
-// Heads or tails handler
-function headsOrTails(e) {
+// Heads or tails event
+$coin.on('click', function(e) {
 	e.preventDefault();
 	e.stopPropagation();
 
@@ -96,7 +96,4 @@ function headsOrTails(e) {
 	setTimeout(function() {
 		$coin.on('click', headsOrTails);
 	}, 2500);
-}
-
-// Heads or tails event
-$coin.on('click', headsOrTails);
+});
