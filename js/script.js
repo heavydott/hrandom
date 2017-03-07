@@ -84,14 +84,11 @@ function headsOrTails() {
 		clearInterval(flip);
 		clearInterval(flipBack);
 
+
 		if(randCoin > 5) {
-			if(!$coin.hasClass('flip')) {
-				$coin.addClass('flip');
-			}
+			$coin.addClass('flip');
 		} else {
-			if($coin.hasClass('flip')) {
-				$coin.removeClass('flip');
-			}
+			$coin.removeClass('flip');
 		}
 	}, 2000);
 
