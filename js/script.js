@@ -64,13 +64,13 @@ function headsOrTails() {
 
 	flip = setInterval(function() {
 		$coin.addClass('flip');
-	}, 100);
+	}, 80);
 
 	setTimeout(function() {
 		flipBack = setInterval(function() {
 			$coin.removeClass('flip');
-		}, 200);
-	}, 150);
+		}, 120);
+	}, 100);
 
 	$container.addClass('bigger');
 
