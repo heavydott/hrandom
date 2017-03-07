@@ -1,3 +1,5 @@
+window.scrollTo(0,1);
+
 var $name = $('#name');
 var $containerNumber = $('#container-number');
 var $in = $('#in');
