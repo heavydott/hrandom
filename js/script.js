@@ -55,11 +55,7 @@ $btn.on('click', function(e) {
 	}
 });
 
-// Heads or tails event
-$coin.on('click', function(e) {
-	e.preventDefault();
-	e.stopPropagation();
-
+function headsOrTails() {
 	var flip, flipBack;
 	var randCoin = Math.floor((Math.random() * 10) + 1);
 
@@ -99,14 +95,26 @@ $coin.on('click', function(e) {
 	setTimeout(function() {
 		$coin.on('click', headsOrTails);
 	}, 2500);
+}
+
+// Heads or tails event
+$coin.on('click', function(e) {
+	e.preventDefault();
+	e.stopPropagation();
+
+	headsOrTails();
 });
 
 $('.tails').on('click', function(e) {
 	e.preventDefault();
 	// e.stopPropagation();
+
+	headsOrTails();
 });
 
 $('.heads').on('click', function(e) {
 	e.preventDefault();
 	// e.stopPropagation();
+
+	headsOrTails();
 });
