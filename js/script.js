@@ -103,10 +103,10 @@ $coin.on('click', function(e) {
 
 $('.tails').on('click', function(e) {
 	e.preventDefault();
-	e.stopPropagation();
+	// e.stopPropagation();
 });
 
 $('.heads').on('click', function(e) {
 	e.preventDefault();
-	e.stopPropagation();
+	// e.stopPropagation();
 });
