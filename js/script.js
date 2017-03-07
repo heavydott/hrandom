@@ -59,7 +59,8 @@ function headsOrTails() {
 	var flip, flipBack;
 	var randCoin = Math.floor((Math.random() * 10) + 1);
 
-	$coin.off('click');
+	$('.tails').off('click');
+	$('.heads').off('click');
 
 	flip = setInterval(function() {
 		$coin.addClass('flip');
@@ -93,7 +94,8 @@ function headsOrTails() {
 	}, 2000);
 
 	setTimeout(function() {
-		$coin.on('click', headsOrTails);
+		$('.tails').on('click', headsOrTails);
+		$('.heads').on('click', headsOrTails);
 	}, 2500);
 }
 
@@ -101,20 +103,16 @@ function headsOrTails() {
 $coin.on('click', function(e) {
 	e.preventDefault();
 	e.stopPropagation();
-
-	headsOrTails();
 });
 
 $('.tails').on('click', function(e) {
 	e.preventDefault();
-	// e.stopPropagation();
 
 	headsOrTails();
 });
 
 $('.heads').on('click', function(e) {
 	e.preventDefault();
-	// e.stopPropagation();
 
 	headsOrTails();
 });
