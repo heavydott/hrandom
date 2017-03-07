@@ -54,10 +54,22 @@ button:focus {
 	outline: 0;
 }
 
-::-webkit-input-placeholder {color:#423164;}
-::-moz-placeholder          {color:#423164;}
-:-moz-placeholder           {color:#423164;}
-:-ms-input-placeholder      {color:#423164;}
+::-webkit-input-placeholder {
+	color:#423164;
+	font-size: 25px;
+}
+::-moz-placeholder {
+	color:#423164;
+	font-size: 25px;
+}
+:-moz-placeholder {
+	color:#423164;
+	font-size: 25px;
+}
+:-ms-input-placeholder {
+	color:#423164;
+	font-size: 25px;
+}
 
 #result {
 	background-color: #423164;
