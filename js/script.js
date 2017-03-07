@@ -26,7 +26,9 @@ $name.on('click', function() {
 });
 
 // Random button event
-$btn.on('click', function() {
+$btn.on('click', function(e) {
+	e.preventDefault();
+
 	var data = $in.val();
 
 	if(isNumeric(data)) {
@@ -50,7 +52,9 @@ $btn.on('click', function() {
 });
 
 // Heads or tails handler
-function headsOrTails() {
+function headsOrTails(e) {
+	e.preventDefault();
+
 	var flip, flipBack;
 	var randCoin = Math.floor((Math.random() * 10) + 1);
 
